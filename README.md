@@ -45,17 +45,22 @@
       ├─Madeon
       │  ├─Adventure [Deluxe Edition] Disc 1
       │          ...
-
-
 ``` 
 ### 데이터 전처리 및 가공
 구현에 앞서, 음악 트랙보다는 intro/outro/intermission등과 가깝거나 러닝타임이 지나치게 짧아 학습에 지장을 줄 것으로 예상될 곡들을 미리 제외하였다.
 
+<<<<<<< Updated upstream
 **예시 1**: 서울, 1:13 AM, (Epik High, Pieces, Pt 1.)   
 
 [![excl1](http://img.youtube.com/vi/jYutv0frJLA/0.jpg)](https://youtu.be/jYutv0frJLA?t=0s)
 
 **예시 2**: Intro, (Muse, Absolution)   
+=======
+**예시 1**: 서울, 1:13 AM, (Epik High, Pieces, Pt 1.)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jYutv0frJLA?si=r-7dJM-Yzyclxq1H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   
+**예시 2**: Intro, (Muse, Absolution)
+>>>>>>> Stashed changes
 [![excl2](http://img.youtube.com/vi/85R5sZynsyM/0.jpg)](https://youtu.be/85R5sZynsyM?t=0s)
 
 **예시 3**: Hidden Track, (브로콜리 너마저, 졸업)   
@@ -82,8 +87,14 @@ https://huggingface.co/Hoonvolution/distilhubert-finetuned-hoons_music
 # 결과
 Training accuracy는 84.4%로 나쁘지 않은 편이지만, 테스트 데이터에 대해서는 77.08%라는 조금은 아쉬운 성능이 관찰되었다.
 
+아티스트 별 정확도를 살펴본 결과는 다음과 같다.   
+![](C:\Users\user\Desktop\gaudio\acc_per_artist.png)
 
-4번 노트북에서 몇몇 오답들을 직접 들어보니 분류가 어려울만 했던 것들도 있었지만, 여러모로 개선의 여지가 많은 것 같다.
+가장 결과가 좋은 Red Hot Chili Peppers의 경우 모든 데이터가 정확히 예측되었다.
+
+Mika의 경우 42.5%로 가장 좋지 않은 결과가 나왔다. 나중에 알아보니 테스트 데이터로 선정된 곡이 하필 중간에 연주가 멈추는 부분이 길게 있었던 것이 이유였다. 데이터 처리 단계에서 미처 거르지 못한게 아쉽다.
+
+그 외에도 4번 노트북에서 몇몇 오답들을 직접 들어보니 분류가 어려울만 했던 것들도 있었지만, 여러모로 개선의 여지가 많은 것 같다.
 
 
 생각해볼만한 개선점으로는 다음이 있겠다.
@@ -96,3 +107,5 @@ Training accuracy는 84.4%로 나쁘지 않은 편이지만, 테스트 데이터
 - 데이터 증강 등으로 학습 데이터 수 늘리기
   - Gaussian noise를 더하는 등 데이터를 조금 더 확보해서 학습을 시켰다면 성능이 좋아지지 않았을까 기대한다.
 
+   
+이 모델은 10초짜리 segment를 인풋으로 하지만, 이를 활용하면 곡 통째의 데이터로부터 segment 추출을 자동으로 해 각각의 prediction을 모아 곡의 아티스트가 누구인지 예측하는 어플리케이션도 가능할 것으로 보인다.
