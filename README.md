@@ -49,18 +49,12 @@
 ### 데이터 전처리 및 가공
 구현에 앞서, 음악 트랙보다는 intro/outro/intermission등과 가깝거나 러닝타임이 지나치게 짧아 학습에 지장을 줄 것으로 예상될 곡들을 미리 제외하였다.
 
-<<<<<<< Updated upstream
 **예시 1**: 서울, 1:13 AM, (Epik High, Pieces, Pt 1.)   
 
 [![excl1](http://img.youtube.com/vi/jYutv0frJLA/0.jpg)](https://youtu.be/jYutv0frJLA?t=0s)
 
 **예시 2**: Intro, (Muse, Absolution)   
-=======
-**예시 1**: 서울, 1:13 AM, (Epik High, Pieces, Pt 1.)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jYutv0frJLA?si=r-7dJM-Yzyclxq1H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-   
-**예시 2**: Intro, (Muse, Absolution)
->>>>>>> Stashed changes
+
 [![excl2](http://img.youtube.com/vi/85R5sZynsyM/0.jpg)](https://youtu.be/85R5sZynsyM?t=0s)
 
 **예시 3**: Hidden Track, (브로콜리 너마저, 졸업)   
