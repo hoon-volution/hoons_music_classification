@@ -82,7 +82,7 @@ https://huggingface.co/Hoonvolution/distilhubert-finetuned-hoons_music
 Training accuracy는 84.4%로 나쁘지 않은 편이지만, 테스트 데이터에 대해서는 77.08%라는 조금은 아쉬운 성능이 관찰되었다.
 
 아티스트 별 정확도를 살펴본 결과는 다음과 같다.   
-![](C:\Users\user\Desktop\gaudio\acc_per_artist.png)
+![](acc_per_artist.png)
 
 가장 결과가 좋은 Red Hot Chili Peppers의 경우 모든 데이터가 정확히 예측되었다.
 
